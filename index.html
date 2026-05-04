@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Homepage</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* 상단 메뉴 */
+header {
+  background: #222;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* 네비게이션 */
+nav {
+  display: flex;
+  justify-content: center;
+  background: #444;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #666;
+}
+
+/* 메인 영역 */
+.container {
+  padding: 40px;
+  text-align: center;
+}
+
+/* 카드 스타일 */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 버튼 */
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* 하단 */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>내 홈페이지</h1>
+  <p>Welcome to my site</p>
+</header>
+
+<nav>
+  <a href="#">홈</a>
+  <a href="#">소개</a>
+  <a href="#">프로젝트</a>
+  <a href="#">연락처</a>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <h2>👋 소개</h2>
+    <p>안녕하세요. 저는 제품 개발 및 기구 설계를 하는 엔지니어입니다.</p>
+  </div>
+
+  <div class="card">
+    <h2>💼 프로젝트</h2>
+    <p>드론, 블루투스, 헬스케어 제품 개발 경험</p>
+    <button onclick="alert('프로젝트 준비중입니다')">자세히 보기</button>
+  </div>
+
+  <div class="card">
+    <h2>📞 연락처</h2>
+    <p>Email: example@email.com</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 My Homepage</p>
+</footer>
+
+</body>
+</html>
