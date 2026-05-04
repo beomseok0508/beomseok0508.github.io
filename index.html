@@ -8,71 +8,92 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
 }
 
-/* 상단 메뉴 */
+/* 헤더 */
 header {
-  background: #222;
+  background: linear-gradient(135deg, #222, #555);
   color: white;
-  padding: 15px;
+  padding: 30px 20px;
   text-align: center;
+}
+
+/* 프로필 이미지 */
+.profile {
+  margin-top: 15px;
+}
+
+.profile img {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
 }
 
 /* 네비게이션 */
 nav {
   display: flex;
   justify-content: center;
-  background: #444;
+  background: #333;
+  position: sticky;
+  top: 0;
 }
 
 nav a {
   color: white;
-  padding: 14px 20px;
+  padding: 15px 25px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  background: #666;
+  background: #007BFF;
 }
 
-/* 메인 영역 */
-.container {
-  padding: 40px;
+/* 섹션 */
+.section {
+  padding: 60px 20px;
   text-align: center;
 }
 
-/* 카드 스타일 */
+/* 카드 */
 .card {
   background: white;
-  padding: 20px;
+  padding: 30px;
   margin: 20px auto;
   width: 80%;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* 버튼 */
 button {
-  padding: 10px 20px;
+  padding: 10px 25px;
   border: none;
   background: #007BFF;
   color: white;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 button:hover {
   background: #0056b3;
 }
 
-/* 하단 */
+/* 푸터 */
 footer {
   background: #222;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
 }
 </style>
 </head>
@@ -81,36 +102,61 @@ footer {
 
 <header>
   <h1>내 홈페이지</h1>
-  <p>Welcome to my site</p>
+  <p>제품 개발 & 기구 설계 엔지니어</p>
+
+  <!-- ✅ 프로필 사진 -->
+  <div class="profile">
+    <img src="profile.jpg" alt="프로필">
+  </div>
 </header>
 
+<!-- ✅ 메뉴 클릭 이동 -->
 <nav>
-  <a href="#">홈</a>
-  <a href="#">소개</a>
-  <a href="#">프로젝트</a>
-  <a href="#">연락처</a>
+  <a href="#home">홈</a>
+  <a href="#about">소개</a>
+  <a href="#project">프로젝트</a>
+  <a href="#contact">연락처</a>
 </nav>
 
-<div class="container">
+<!-- 홈 -->
+<section id="home" class="section">
+  <div class="card">
+    <h2>🏠 홈</h2>
+    <p>Welcome to my professional homepage</p>
+  </div>
+</section>
 
+<!-- 소개 -->
+<section id="about" class="section">
   <div class="card">
     <h2>👋 소개</h2>
-    <p>안녕하세요. 저는 제품 개발 및 기구 설계를 하는 엔지니어입니다.
-    어떠한 제품의 기구설계 가능합니다. 맡겨 주세요</p>
+    <p>
+      안녕하세요.<br>
+      IT / 가전 / 드론 / 헬스케어 제품 개발 경험을 보유한<br>
+      기구설계 엔지니어입니다.<br><br>
+      양산을 고려한 설계, 원가절감 설계 가능합니다.
+    </p>
   </div>
+</section>
 
+<!-- 프로젝트 -->
+<section id="project" class="section">
   <div class="card">
     <h2>💼 프로젝트</h2>
-    <p>IT, 가전, 드론, 블루투스, 헬스케어, 미용 제품 개발 경험</p>
-    <button onclick="alert('프로젝트 준비중입니다')">자세히 보기</button>
+    <p>드론, 블루투스, 헬스케어, 미용기기 개발 경험</p>
+    <button onclick="alert('프로젝트 상세 준비중입니다')">자세히 보기</button>
   </div>
+</section>
 
+<!-- 연락처 -->
+<section id="contact" class="section">
   <div class="card">
     <h2>📞 연락처</h2>
-    <p>Email: bskim@bskim.co.kr</p>
+    <p>Email: 
+      <a href="mailto:bskim@bskim.co.kr">bskim@bskim.co.kr</a>
+    </p>
   </div>
-
-</div>
+</section>
 
 <footer>
   <p>© 2026 My Homepage</p>
@@ -118,5 +164,3 @@ footer {
 
 </body>
 </html>
-
-<img src="profile.jpg" width="150">
